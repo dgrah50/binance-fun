@@ -13,13 +13,10 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-grow pt-24 pb-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-screen-xl mx-auto">
-            <div className="rounded-lg p-6 mb-8 backdrop-blur-xl bg-background/80">
-              <h2 className="text-2xl font-semibold mb-6">Market Overview</h2>
-              <MarketSelector />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="container mx-auto">
+          <div>
+            <MarketSelector />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <Suspense fallback={<div>Loading order book...</div>}>
                 <OrderBook />
               </Suspense>

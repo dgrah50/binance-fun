@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import Header from "@/components/Header";
-import MarketSelector from "@/components/MarketSelector";
-import OrderBook from "@/components/OrderBook";
-import TradeFeed from "@/components/TradeFeed";
+import Header from "@/components/shared/Header";
+import MarketSelector from "@/components/shared/MarketSelector";
+import OrderBook from "@/components/orderbook/OrderBook";
+import TradeFeed from "@/components/tradefeed/TradeFeed";
 
 export const metadata = {
   title: "Mini Trade App",

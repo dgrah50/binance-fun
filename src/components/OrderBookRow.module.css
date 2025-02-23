@@ -1,0 +1,48 @@
+@keyframes flashGreen {
+  0% {
+    background-color: rgba(34, 197, 94, 0);
+  }
+  50% {
+    background-color: rgba(34, 197, 94, 0.25);
+  }
+  100% {
+    background-color: rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: rgba(239, 68, 68, 0);
+  }
+  50% {
+    background-color: rgba(239, 68, 68, 0.25);
+  }
+  100% {
+    background-color: rgba(239, 68, 68, 0);
+  }
+}
+
+.flash-green {
+  animation: flashGreen 0.5s ease-out;
+}
+
+.flash-red {
+  animation: flashRed 0.5s ease-out;
+}
+
+.row {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+}

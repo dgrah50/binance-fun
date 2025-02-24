@@ -150,7 +150,8 @@ export const getOrderBookStream = (symbol: string): Observable<OrderBook> => {
       catchError((err) => {
         console.error(`Order book error for ${symbol}:`, err);
         stream.close();
-        return EMPTY;
+        // Rethrow the error to trigger retryWhen
+        return throwError(err);
       }),
       finalize(() => {
         console.log(`Finalizing stream for ${symbol}`);

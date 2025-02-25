@@ -44,10 +44,6 @@ const applyDepthUpdate = (
   if (update.u < orderBook.lastUpdateId) {
     return orderBook;
   }
-  // 2. If the update’s first update ID is greater than our current update ID + 1, we have a gap.
-  if (update.U > orderBook.lastUpdateId + 1) {
-    throw new Error("Order book out of sync: missing updates");
-  }
 
   return {
     lastUpdateId: update.u,
